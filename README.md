@@ -9,4 +9,4 @@ This application has been adapted to work with CodeDeploy
 
 * Install nodejs & npm on the target machine
 * Deploy this repo using CodeDeploy
-* Application is now available on port 5000
+* Application is now available
