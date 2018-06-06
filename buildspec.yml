@@ -6,6 +6,17 @@ phases:
       - printenv
       - npm install
 
+  test:
+    commands:
+      - npm test
+
   build:
     commands:
       - npm test
+      - mkdir -p build
+      - zip -x '*.git*' -r build/app.zip .
+
+artifacts:
+  files:
+    - build/app.zip
+  discard-paths: yes
