@@ -9,10 +9,10 @@ phases:
   build:
     commands:
       - npm test
-      - mkdir -p build
-      - zip -x '*.git*' '*node_modules*' -r build/app.zip .
+      - rm -rf .git
+      - rm -rf node_modules
 
 artifacts:
   files:
-    - build/app.zip
-  discard-paths: yes
+    - '**/*'
+  discard-paths: no
