@@ -24,7 +24,7 @@ module.exports = {
 	post: function(req, res, next) {
 		var id = req.body.id || (Math.ceil(Math.random() * 1000)).toString().substring(0, 3),
 			returnData = req.body;
-		//returnData.id = id;
+		returnData.id = id;
 		returnData.createdAt = new Date().toISOString();
 
 		return res.status(201).send(returnData);
