@@ -6,10 +6,6 @@ phases:
       - printenv
       - npm install
 
-  test:
-    commands:
-      - npm test
-
   build:
     commands:
       - npm test
