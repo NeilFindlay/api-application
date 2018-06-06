@@ -6,12 +6,9 @@ phases:
       - printenv
       - npm install
 
-  test:
-    commands:
-      - npm test
-
   build:
     commands:
+      - npm test
       - mkdir -p build
       - tar -zcf --exclude='./build' build/api-application-$(date +%Y%m%d%H%m%S).tar.gz .
 
