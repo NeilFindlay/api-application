@@ -1,0 +1,21 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - printenv
+      - npm install
+
+  test:
+    commands:
+      - npm test
+
+  build:
+    commands:
+      - mkdir -p build
+      - tar -zcf --exclude='./build' build/api-application-$(date +%Y%m%d%H%m%S).tar.gz .
+
+artifacts:
+  files:
+    - build*/**
+  discard-paths: yes
