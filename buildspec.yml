@@ -10,7 +10,7 @@ phases:
     commands:
       - npm test
       - mkdir -p build
-      - zip -x '*.git*' -r build/app.zip .
+      - zip -x '*.git*' '*node_modules*' -r build/app.zip .
 
 artifacts:
   files:
